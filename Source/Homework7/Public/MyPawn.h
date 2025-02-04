@@ -7,6 +7,7 @@
 class UBoxComponent;
 class USpringArmComponent;
 class UCameraComponent;
+struct FInputActionValue;
 
 UCLASS()
 class HOMEWORK7_API AMyPawn : public APawn
@@ -17,12 +18,14 @@ public:
 	AMyPawn();
 
 protected:
-	virtual void BeginPlay() override;
-	virtual void Tick(float DeltaTime) override;
+	UFUNCTION()
+	void Move(const FInputActionValue& value);
+	UFUNCTION()
+	void Look(const FInputActionValue& value);
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-public:
+protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	UBoxComponent* BoxComp;
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
