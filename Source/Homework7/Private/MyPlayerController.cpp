@@ -15,8 +15,7 @@ void AMyPlayerController::BeginPlay()
 
 	if (ULocalPlayer* LocalPlayer = GetLocalPlayer())
 	{
-		if (UEnhancedInputLocalPlayerSubsystem* Subsystem
-			= LocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>())
+		if (UEnhancedInputLocalPlayerSubsystem* Subsystem = LocalPlayer->GetSubsystem<UEnhancedInputLocalPlayerSubsystem>())
 		{
 			if (InputMappingContext)
 			{

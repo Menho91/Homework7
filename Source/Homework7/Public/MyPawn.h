@@ -20,6 +20,7 @@ public:
 protected:
 	UFUNCTION()
 	void Move(const FInputActionValue& value);
+
 	UFUNCTION()
 	void Look(const FInputActionValue& value);
 
@@ -28,10 +29,13 @@ protected:
 protected:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	UBoxComponent* BoxComp;
+
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly, Category = "Components")
 	USkeletalMeshComponent* SkeletalMeshComp;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	USpringArmComponent* SpringArmComp;
+
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components")
 	UCameraComponent* CameraComp;
 
