@@ -19,9 +19,9 @@ public:
 
 protected:
 	UFUNCTION()
-	void Move(const FInputActionValue& value);
+	virtual void Move(const FInputActionValue& value);
 	UFUNCTION()
-	void Look(const FInputActionValue& value);
+	virtual void Look(const FInputActionValue& value);
 
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 

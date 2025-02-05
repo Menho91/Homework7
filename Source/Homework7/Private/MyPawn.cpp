@@ -58,7 +58,7 @@ void AMyPawn::Move(const FInputActionValue& value)
 {
 	if (!Controller) return;
 
-	const FVector2D MoveInput = value.Get<FVector2D>();
+	const FVector MoveInput = value.Get<FVector>();
 	FVector MovingXVector(FVector::XAxisVector * MoveInput.X * 10.0f);
 	FVector MovingYVector(FVector::YAxisVector * MoveInput.Y * 10.0f);
 
