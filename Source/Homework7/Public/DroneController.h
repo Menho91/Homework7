@@ -1,18 +1,31 @@
 #pragma once
 
 #include "CoreMinimal.h"
-#include "MyPlayerController.h"
+#include "GameFramework/PlayerController.h"
 #include "DroneController.generated.h"
 
+class UInputMappingContext;
+class UInputAction;
+
 UCLASS()
-class HOMEWORK7_API ADroneController : public AMyPlayerController
+class HOMEWORK7_API ADroneController : public APlayerController
 {
 	GENERATED_BODY()
 	
 public:
 	ADroneController();
 
+protected:
+	virtual void BeginPlay() override;
+
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
-	UInputAction* UpDownAction;
+	UInputMappingContext* InputMappingContext;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	UInputAction* MoveAction;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Input")
+	UInputAction* LookAction;
+
 };

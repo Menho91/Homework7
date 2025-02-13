@@ -7,3 +7,4 @@ ADroneGameMode::ADroneGameMode()
 	DefaultPawnClass = AMyDrone::StaticClass();
 	PlayerControllerClass = ADroneController::StaticClass();
 }
+

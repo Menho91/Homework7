@@ -11,4 +11,5 @@ class HOMEWORK7_API ADroneGameMode : public AGameMode
 	
 public:
 	ADroneGameMode();
+
 };
